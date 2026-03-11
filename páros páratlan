@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// A) verzió [páros]
+int is_even(int n) {
+    if (n % 2 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+// B) verzió [páratlan]
+int is_odd(int n) {
+    if (n % 2 != 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    int szam;
+
+    printf("Adj meg egy egesz szamot: ");
+    if (scanf("%d", &szam) == 1) {
+        printf("A szam paros? %d\n", is_even(szam));
+        printf("A szam paratlan? %d\n", is_odd(szam));
+    }
+
+    return 0;
+}
